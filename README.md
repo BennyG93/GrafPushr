@@ -1,11 +1,11 @@
 # Grafana Dashboard Pusher
 
-Store JSON Dashboard config in ./tmeplates
+Store JSON Dashboard templates in ./tmeplates
 
 ##### Examples:
 - Listing all Grafana Dashboards
 ```sh
-$ ./GrafPushr.rb -o list -u h1grf01-v01.devops.stg2.ovp.bskyb.com -d all
+$ ./GrafPushr.rb -o list -u grafana.example.com -d all
 Listing all dashboards:
 Database Performance - db/database-performance
 System Healthcheck - db/system-healthcheck
@@ -13,14 +13,14 @@ System Healthcheck - db/system-healthcheck
 
 - Adding a Dashboard to Grafana
 ```sh
-$ ./GrafPushr.rb -o add -u h1grf01-v01.devops.stg2.ovp.bskyb.com -d system-healthcheck
+$ ./GrafPushr.rb -o add -u grafana.example.com -d system-healthcheck
 ADDING Dashboard
 {"slug":"system-healthcheck","status":"success","version":0}
 ```
 
 - Deleting a Dashboard from Grafana
 ```sh
-$ ./GrafPushr.rb -o delete -u h1grf01-v01.devops.stg2.ovp.bskyb.com -d system-healthcheck
+$ ./GrafPushr.rb -o delete -u grafana.example.com -d system-healthcheck
 DELETED Dashboard:
 {"title":"System Healthcheck"}
 ```
@@ -32,7 +32,7 @@ $ ./GrafPushr.rb -h
 	It is only desinged for Dashboards and has 3 functions LIST, ADD, DELETE.
 
 	Example:
-	$ ./GrafPushr.rb -o list -u h1grf01-v01.devops.stg2.ovp.bskyb.com -d system-healthcheck
+	$ ./GrafPushr.rb -o list -u grafana.example.com -d system-healthcheck
 
 	Usage:
 		ruby api_tool.rb [options]
