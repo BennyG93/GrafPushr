@@ -51,7 +51,8 @@ Tests are invoked using `rake`
 
 ```sh
 $ rake -T
-rake spec  # Run all tests for this tool
+rake jsonlint  # JSON Lint test on files in templates directory
+rake spec      # Run all tests for this tool
 ```
 
 ```sh
